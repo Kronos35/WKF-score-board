@@ -1,0 +1,41 @@
+.aka{
+	background: #bc0505;
+	color: white;
+	font-size:20px;
+}
+.aka .card{
+	background: #bc0505;
+	border-color: white;
+}
+
+
+.ao{
+	background: #1105bc;
+	color: white;
+	font-size:20px;
+}
+.ao .card{
+	background: #1105bc;
+	border-color: white;
+}
+.circle {
+	border-color: white;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	padding: 10px 0;
+	font-size: 12px;
+	line-height: 1.428571429;
+	border-radius: 20px;
+}
+.score-board{
+	background: #232323;
+	font-size:60px;
+}
+.score-board h1{
+	font-size:80px;
+}
+body {
+	background: black;
+	color: white;
+}
