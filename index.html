@@ -115,7 +115,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text" id="inputGroup-sizing-sm">Ao name: </span>
 						</div>
-						<input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" v-bind:value="ao.name">
+						<input type="text" class="form-control" aria-label="Small" v-model='ao.name' aria-describedby="inputGroup-sizing-sm" v-bind:value="ao.name">
 					</div>
 				</div>
 				<div class="col">
@@ -123,7 +123,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text" id="inputGroup-sizing-sm">Aka name: </span>
 						</div>
-						<input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" v-bind:value="aka.name">
+						<input type="text" class="form-control" aria-label="Small" v-model='aka.name' aria-describedby="inputGroup-sizing-sm" v-bind:value="aka.name">
 					</div>
 				</div>
             </div>           
