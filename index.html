@@ -30,12 +30,13 @@
 
             <div class="row text-center">
             	<div class="col"><h3>Ao: {{ao.name}} </h3></div>
+            	<div class="col"><h3>{{timer.status}}</h3></div>
             	<div class="col"><h3>Aka: {{aka.name}} </h3></div>
             </div>
 
             <div class="score-board row text-center">
             	<div class="col"><h1>{{ao.points}}</h1></div>
-            	<div class="col" id="timer">{{minutes}}:{{seconds}}</div>
+            	<div class="col" id="timer">0{{timer.minutes}}:{{placeholder}}{{timer.seconds}}</div>
             	<div class="col"><h1>{{aka.points}}</h1></div>
             </div>
 
@@ -44,22 +45,22 @@
 				<div class="container">
 					<div class="row text-center">
 		            	<div class="col card"><h3>C1</h3></div>
-		            	<div class="col circle border border-white">W</div>
-		            	<div class="col circle border border-white">K</div>
-		            	<div class="col circle border border-white">HC</div>
-		            	<div class="col circle border border-white">H</div>
+		            	<div class="col circle border border-white" @click="ao_chukoku_c1">W</div>
+		            	<div class="col circle border border-white" @click='ao_keikoku_c1'>K</div>
+		            	<div class="col circle border border-white" @click='ao_hansoku_chui_c1'>HC</div>
+		            	<div class="col circle border border-white" @click='ao_hansoku_c1'>H</div>
 		            </div>
 		            <div class="row text-center">
 		            	<div class="col card"><h3>C2</h3></div>
-		            	<div class="col circle border border-white">W</div>
-		            	<div class="col circle border border-white">K</div>
-		            	<div class="col circle border border-white">HC</div>
-		            	<div class="col circle border border-white">H</div>
+		            	<div class="col circle border border-white" @click="ao_chukoku_c2">W</div>
+		            	<div class="col circle border border-white" @click='ao_keikoku_c2'>K</div>
+		            	<div class="col circle border border-white" @click='ao_hansoku_chui_c2'>HC</div>
+		            	<div class="col circle border border-white" @click='ao_hansoku_c2'>H</div>
 		            </div>
 		            <div class="row text-center">
-		            	<div class="col"><button v-on:click="ao.points+=3" class="btn btn-primary">Ippon</button></div>
-		            	<div class="col"><button v-on:click="ao.points+=2" class="btn btn-primary">Waza-ari</button></div>
-		            	<div class="col"><button v-on:click="ao.points++" class="btn btn-primary">Yuko</button></div>
+		            	<div class="col"><button v-on:click="ao_ippon" class="btn btn-primary">Ippon</button></div>
+		            	<div class="col"><button v-on:click="ao_wazaari" class="btn btn-primary">Waza-ari</button></div>
+		            	<div class="col"><button v-on:click="ao_yuko" class="btn btn-primary">Yuko</button></div>
 		            </div>
 		            <div class="row text-center">
 			            <div class="col">
@@ -76,22 +77,22 @@
 				<div class="container">
 					<div class="row text-center">
 		            	<div class="col card"><h3>C1</h3></div>
-		            	<div class="col circle border border-white">W</div>
-		            	<div class="col circle border border-white">K</div>
-		            	<div class="col circle border border-white">HC</div>
-		            	<div class="col circle border border-white">H</div>
+		            	<div class="col circle border border-white" @click="aka_chukoku_c1">W</div>
+		            	<div class="col circle border border-white" @click='aka_keikoku_c1'>K</div>
+		            	<div class="col circle border border-white" @click='aka_hansoku_chui_c1'>HC</div>
+		            	<div class="col circle border border-white" @click='aka_hansoku_c1'>H</div>
 		            </div>
 		            <div class="row text-center">
 		            	<div class="col card"><h3>C2</h3></div>
-		            	<div class="col circle border border-white">W</div>
-		            	<div class="col circle border border-white">K</div>
-		            	<div class="col circle border border-white">HC</div>
-		            	<div class="col circle border border-white">H</div>
+		            	<div class="col circle border border-white" @click="aka_chukoku_c2">W</div>
+		            	<div class="col circle border border-white" @click='aka_keikoku_c2'>K</div>
+		            	<div class="col circle border border-white" @click='aka_hansoku_chui_c2'>HC</div>
+		            	<div class="col circle border border-white" @click='aka_hansoku_c2'>H</div>
 		            </div>
 		            <div class="row text-center">
-		            	<div class="col"><button v-on:click="aka.points+=3" class="btn btn-danger">Ippon</button></div>
-		            	<div class="col"><button v-on:click="aka.points+=2" class="btn btn-danger">Waza-ari</button></div>
-		            	<div class="col"><button v-on:click="aka.points++" class="btn btn-danger">Yuko</button></div>
+		            	<div class="col"><button v-on:click="aka_ippon" class="btn btn-danger">Ippon</button></div>
+		            	<div class="col"><button v-on:click="aka_wazaari" class="btn btn-danger">Waza-ari</button></div>
+		            	<div class="col"><button v-on:click="aka_yuko" class="btn btn-danger">Yuko</button></div>
 		            </div>
 		            <div class="row text-center">
 			            <div class="col">
@@ -106,7 +107,12 @@
             </div>
             <div class="row text-center">
             	<div class="col">
-            		<button class="btn btn-success">Hajime</button>
+            		<button class="btn btn-success" @click="start_tiempo">Hajime</button>
+            	</div>
+        	</div>
+        	<div class="row text-center">
+            	<div class="col">
+            		<button class="btn btn-danger" @click="clear_board">Restart</button>
             	</div>
         	</div>
             <div class="row text-center">
