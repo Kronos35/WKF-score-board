@@ -45,17 +45,17 @@
 				<div class="container">
 					<div class="row text-center">
 		            	<div class="col card"><h3>C1</h3></div>
-		            	<div class="col circle border border-white" @click="ao_chukoku_c1">W</div>
-		            	<div class="col circle border border-white" @click='ao_keikoku_c1'>K</div>
-		            	<div class="col circle border border-white" @click='ao_hansoku_chui_c1'>HC</div>
-		            	<div class="col circle border border-white" @click='ao_hansoku_c1'>H</div>
+		            	<div class="col circle border border-white" v-bind:class="{selected: ao.C1.w}" @click="ao_chukoku_c1">W</div>
+		            	<div class="col circle border border-white" v-bind:class="{selected: ao.C1.k}" @click='ao_keikoku_c1'>K</div>
+		            	<div class="col circle border border-white" v-bind:class="{selected: ao.C1.hc}" @click='ao_hansoku_chui_c1'>HC</div>
+		            	<div class="col circle border border-white" v-bind:class="{selected: ao.C1.h}" @click='ao_hansoku_c1'>H</div>
 		            </div>
 		            <div class="row text-center">
 		            	<div class="col card"><h3>C2</h3></div>
-		            	<div class="col circle border border-white" @click="ao_chukoku_c2">W</div>
-		            	<div class="col circle border border-white" @click='ao_keikoku_c2'>K</div>
-		            	<div class="col circle border border-white" @click='ao_hansoku_chui_c2'>HC</div>
-		            	<div class="col circle border border-white" @click='ao_hansoku_c2'>H</div>
+		            	<div class="col circle border border-white" v-bind:class="{selected: ao.C2.w}" @click="ao_chukoku_c2">W</div>
+		            	<div class="col circle border border-white" v-bind:class="{selected: ao.C2.k}" @click='ao_keikoku_c2'>K</div>
+		            	<div class="col circle border border-white" v-bind:class="{selected: ao.C2.hc}" @click='ao_hansoku_chui_c2'>HC</div>
+		            	<div class="col circle border border-white" v-bind:class="{selected: ao.C2.h}" @click='ao_hansoku_c2'>H</div>
 		            </div>
 		            <div class="row text-center">
 		            	<div class="col"><button v-on:click="ao_ippon" class="btn btn-primary">Ippon</button></div>
@@ -77,17 +77,17 @@
 				<div class="container">
 					<div class="row text-center">
 		            	<div class="col card"><h3>C1</h3></div>
-		            	<div class="col circle border border-white" @click="aka_chukoku_c1">W</div>
-		            	<div class="col circle border border-white" @click='aka_keikoku_c1'>K</div>
-		            	<div class="col circle border border-white" @click='aka_hansoku_chui_c1'>HC</div>
-		            	<div class="col circle border border-white" @click='aka_hansoku_c1'>H</div>
+		            	<div class="col circle border border-white" v-bind:class="{selected: aka.C1.w}" @click="aka_chukoku_c1">W</div>
+		            	<div class="col circle border border-white" v-bind:class="{selected: aka.C1.k}" @click='aka_keikoku_c1'>K</div>
+		            	<div class="col circle border border-white" v-bind:class="{selected: aka.C1.hc}" @click='aka_hansoku_chui_c1'>HC</div>
+		            	<div class="col circle border border-white" v-bind:class="{selected: aka.C1.h}" @click='aka_hansoku_c1'>H</div>
 		            </div>
 		            <div class="row text-center">
 		            	<div class="col card"><h3>C2</h3></div>
-		            	<div class="col circle border border-white" @click="aka_chukoku_c2">W</div>
-		            	<div class="col circle border border-white" @click='aka_keikoku_c2'>K</div>
-		            	<div class="col circle border border-white" @click='aka_hansoku_chui_c2'>HC</div>
-		            	<div class="col circle border border-white" @click='aka_hansoku_c2'>H</div>
+		            	<div class="col circle border border-white" v-bind:class="{selected: aka.C2.w}" @click="aka_chukoku_c2">W</div>
+		            	<div class="col circle border border-white" v-bind:class="{selected: aka.C2.k}" @click='aka_keikoku_c2'>K</div>
+		            	<div class="col circle border border-white" v-bind:class="{selected: aka.C2.hc}" @click='aka_hansoku_chui_c2'>HC</div>
+		            	<div class="col circle border border-white" v-bind:class="{selected: aka.C2.h}" @click='aka_hansoku_c2'>H</div>
 		            </div>
 		            <div class="row text-center">
 		            	<div class="col"><button v-on:click="aka_ippon" class="btn btn-danger">Ippon</button></div>

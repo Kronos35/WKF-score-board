@@ -28,6 +28,10 @@
 	line-height: 1.428571429;
 	border-radius: 20px;
 }
+.selected {
+	background: white;
+	color: black;
+}
 .score-board{
 	background: #232323;
 	font-size:60px;

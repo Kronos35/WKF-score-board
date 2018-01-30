@@ -7,12 +7,36 @@ new Vue({
 			points: 0,
 			c1: 0,
 			c2: 0,
+			C1:{
+				w:false,
+				k:false,
+				hc:false,
+				h:false
+			},
+			C2:{
+				w:false,
+				k:false,
+				hc:false,
+				h:false
+			}
 		},
 		aka: {
 			name: 'Ruben Gomez',
 			points: 0,
 			c1: 0,
 			c2: 0,
+			C1:{
+				w:false,
+				k:false,
+				hc:false,
+				h:false
+			},
+			C2:{
+				w:false,
+				k:false,
+				hc:false,
+				h:false
+			}
 		},
 		division: 'Males -60kg',
 		atoshi_baraku: false,
@@ -142,60 +166,80 @@ new Vue({
 		// C1 Infractions
 		ao_chukoku_c1:function(){
 			this.ao.c1=1;
+			this.ao.C1.w=(this.ao.C1.w) ? false : true;
 		},
 		ao_keikoku_c1:function(){
 			this.ao.c1=2;
+			this.ao.C1.k=(this.ao.C1.k) ? false : true;
 		},
 		ao_hansoku_chui_c1:function(){
 			this.ao.c1=3;
+			this.ao.C1.hc=(this.ao.C1.hc) ? false : true;
 		},
 		ao_hansoku_c1:function(){
 			this.ao.c1=4;
+			this.ao.C1.h=(this.ao.C1.h) ? false : true;
 			swal(this.aka.name+" gana!");
+			this.ao.C1.h=(this.ao.C1.h) ? false : true;
 		},
 		// C2 Infractions
 		ao_chukoku_c2:function(){
 			this.ao.c2=1;
+			this.ao.C2.w=(this.ao.C2.w) ? false : true;
 		},
 		ao_keikoku_c2:function(){
 			this.ao.c2=2;
+			this.ao.C2.k=(this.ao.C2.k) ? false : true;
 		},
 		ao_hansoku_chui_c2:function(){
 			this.ao.c2=3;
+			this.ao.C2.hc=(this.ao.C2.hc) ? false : true;
 		},
 		ao_hansoku_c2:function(){
 			this.ao.c2=4;
+			this.ao.C2.h=(this.ao.C2.h) ? false : true;
 			swal(this.aka.name+" gana!");
+			this.ao.C2.h=(this.ao.C2.h) ? false : true;
 		},
 
 		// Aka infractions
 		// C1 Infractions
 		aka_chukoku_c1:function(){
 			this.aka.c1=1;
+			this.aka.C1.w=(this.aka.C1.w) ? false : true;
 		},
 		aka_keikoku_c1:function(){
 			this.aka.c1=2;
+			this.aka.C1.k=(this.aka.C1.k) ? false : true;
 		},
 		aka_hansoku_chui_c1:function(){
 			this.aka.c1=3;
+			this.aka.C1.hc=(this.aka.C1.hc) ? false : true;
 		},
 		aka_hansoku_c1:function(){
 			this.aka.c1=4;
+			this.aka.C1.h=(this.aka.C1.h) ? false : true;
 			swal(this.ao.name+" gana!");
+			this.aka.C1.h=(this.aka.C1.h) ? false : true;
 		},
 		// C2 Infractions
 		aka_chukoku_c2:function(){
 			this.aka.c2=1;
+			this.aka.C2.w=(this.aka.C2.w) ? false : true;
 		},
 		aka_keikoku_c2:function(){
 			this.aka.c2=2;
+			this.aka.C2.k=(this.aka.C2.k) ? false : true;
 		},
 		aka_hansoku_chui_c2:function(){
 			this.aka.c2=3;
+			this.aka.C2.hc=(this.aka.C2.hc) ? false : true;
 		},
 		aka_hansoku_c2:function(){
 			this.aka.c2=4;
+			this.aka.C2.h=(this.aka.C2.h) ? false : true;
 			swal(this.ao.name+" gana!");
+			this.aka.C2.h=(this.aka.C2.h) ? false : true;
 		},
 	}
 });
